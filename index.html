@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduNAPZA 2026 - Alif Meiwa Saputra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .accent-border {
+            border-left: 4px solid #3b82f6;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-blue-600 p-2 rounded-lg">
+                        <i class="fas fa-shield-heart text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold text-slate-900 tracking-tight block leading-none">EduNAPZA</span>
+                        <span class="text-[10px] text-blue-600 font-bold uppercase tracking-widest">Digital Care 2026</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-10 font-semibold text-sm">
+                    <a href="#beranda" class="hover:text-blue-600 transition">Beranda</a>
+                    <a href="#pengertian" class="hover:text-blue-600 transition">Pengertian</a>
+                    <a href="#pencegahan" class="hover:text-blue-600 transition">Pencegahan</a>
+                    <a href="#regulasi" class="hover:text-blue-600 transition">Regulasi</a>
+                </div>
+                <button onclick="toggleHotline()" class="hidden md:block bg-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-700 transition-all shadow-md active:scale-95">
+                    Layanan Bantuan
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-900">
+                    <i class="fas fa-bars-staggered text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t px-6 py-8 space-y-6 shadow-2xl">
+            <a href="#beranda" class="block text-lg font-bold">Beranda</a>
+            <a href="#pengertian" class="block text-lg font-bold">Pengertian</a>
+            <a href="#pencegahan" class="block text-lg font-bold">Pencegahan</a>
+            <a href="#regulasi" class="block text-lg font-bold">Regulasi</a>
+            <button onclick="toggleHotline()" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold">Layanan Bantuan</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="hero-gradient pt-44 pb-32 px-4 text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto relative">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-3/5 space-y-8 z-10 text-center md:text-left">
+                    <div class="inline-block bg-blue-500/20 px-4 py-1.5 rounded-full border border-blue-400/30 text-blue-200 text-xs font-bold uppercase tracking-widest mb-2">
+                        Kampanye Anti Narkoba Nasional
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1]">
+                        Wujudkan Generasi <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Indonesia Emas</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-blue-100/80 max-w-2xl leading-relaxed">
+                        Lindungi masa depan bangsa melalui pemahaman mendalam tentang bahaya NAPZA dan penegakan UU No. 35 Tahun 2009. Mari bergerak bersama di tahun 2026.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#pengertian" class="bg-white text-blue-900 px-8 py-4 rounded-2xl font-bold hover:shadow-2xl hover:shadow-blue-500/40 transition-all active:scale-95 text-center">
+                            Pelajari Sekarang
+                        </a>
+                        <a href="#regulasi" class="bg-blue-800/50 backdrop-blur-sm border border-blue-400/30 px-8 py-4 rounded-2xl font-bold hover:bg-blue-800 transition-all text-center">
+                            Lihat UU Narkotika
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-2/5 flex justify-center relative">
+                    <div class="w-72 h-72 md:w-96 md:h-96 bg-gradient-to-tr from-blue-500 to-cyan-400 rounded-[30% 70% 70% 30% / 30% 30% 70% 70%] opacity-20 absolute animate-pulse"></div>
+                    <div class="float-animation relative z-10">
+                        <i class="fas fa-hand-holding-heart text-[160px] md:text-[220px] text-white drop-shadow-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengertian Section -->
+    <section id="pengertian" class="py-32 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl mb-20">
+                <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest mb-3">Definisi & Klasifikasi</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Mengenal NAPZA Secara Menyeluruh</h3>
+                <p class="text-slate-600 text-lg">NAPZA adalah akronim dari Narkotika, Psikotropika, dan Zat Adiktif lainnya yang berdampak pada kesehatan mental dan fisik.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Narkotika -->
+                <div class="group p-10 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500">
+                    <div class="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-capsules text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Narkotika</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Zat yang menyebabkan penurunan kesadaran, hilangnya rasa nyeri, dan ketergantungan fisik yang kuat.</p>
+                    <div class="flex items-center text-blue-600 font-bold text-sm">
+                        <span>Berdasarkan UU 35/2009</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Psikotropika -->
+                <div class="group p-10 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500">
+                    <div class="w-16 h-16 bg-indigo-600 text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Psikotropika</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Zat psikoaktif yang mempengaruhi susunan saraf pusat, merubah mental, dan perilaku pengguna secara drastis.</p>
+                    <div class="flex items-center text-indigo-600 font-bold text-sm">
+                        <span>Efek Psikoaktif</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+
+                <!-- Zat Adiktif -->
+                <div class="group p-10 rounded-3xl border border-slate-100 bg-slate-50 hover:bg-white hover:shadow-2xl hover:shadow-slate-200 transition-all duration-500">
+                    <div class="w-16 h-16 bg-cyan-600 text-white rounded-2xl flex items-center justify-center mb-8 transform group-hover:rotate-12 transition-transform">
+                        <i class="fas fa-wine-bottle text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Zat Adiktif</h3>
+                    <p class="text-slate-600 leading-relaxed mb-6">Bahan lain seperti alkohol, inhalan, dan nikotin yang menimbulkan adiksi/ketagihan yang merusak organ tubuh.</p>
+                    <div class="flex items-center text-cyan-600 font-bold text-sm">
+                        <span>Bahaya Laten</span>
+                        <i class="fas fa-arrow-right ml-2 group-hover:translate-x-2 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pencegahan Section -->
+    <section id="pencegahan" class="py-32 px-4 bg-slate-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-blue-400 font-bold uppercase tracking-widest text-sm mb-4">Strategi Preventif</h2>
+                <h3 class="text-4xl md:text-5xl font-extrabold">Benteng Pertahanan Generasi</h3>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex gap-6 p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+                        <div class="flex-shrink-0 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Ketahanan Keluarga</h4>
+                            <p class="text-slate-400">Komunikasi terbuka antara orang tua dan anak menjadi kunci utama deteksi dini dan perlindungan.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Seleksi Pergaulan</h4>
+                            <p class="text-slate-400">Mampu berkata "TIDAK" pada tawaran negatif dan memilih komunitas yang produktif.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6 p-8 rounded-3xl bg-white/5 border border-white/10 hover:bg-white/10 transition">
+                        <div class="flex-shrink-0 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">Literasi Digital</h4>
+                            <p class="text-slate-400">Memahami modus operandi peredaran gelap narkoba melalui media sosial dan platform digital.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="w-full aspect-square max-w-md border-2 border-dashed border-white/20 rounded-full flex items-center justify-center animate-[spin_20s_linear_infinite]">
+                        <div class="absolute -top-6 bg-blue-600 px-4 py-2 rounded-lg font-bold">EDUKASI</div>
+                        <div class="absolute -bottom-6 bg-red-600 px-4 py-2 rounded-lg font-bold">SAY NO</div>
+                        <div class="absolute -left-10 bg-green-600 px-4 py-2 rounded-lg font-bold">AKHLAK</div>
+                        <div class="absolute -right-10 bg-yellow-600 px-4 py-2 rounded-lg font-bold">HOBI</div>
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-center">
+                            <span class="text-6xl font-black block text-blue-500">100%</span>
+                            <span class="text-xs font-bold tracking-[0.3em] uppercase">Bebas Narkoba</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regulasi Section -->
+    <section id="regulasi" class="py-32 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="relative">
+                        <div class="absolute -inset-4 bg-blue-100 rounded-3xl -rotate-2"></div>
+                        <div class="relative bg-white p-10 rounded-3xl shadow-xl border border-slate-100">
+                            <div class="flex items-center gap-4 mb-8">
+                                <i class="fas fa-gavel text-3xl text-blue-900"></i>
+                                <h3 class="text-2xl font-extrabold text-blue-900 uppercase">Hukum Indonesia</h3>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-900 mb-6">UU RI Nomor 35 Tahun 2009</h4>
+                            <div class="space-y-6">
+                                <div class="accent-border pl-6">
+                                    <h5 class="font-bold text-slate-800">Pasal 7</h5>
+                                    <p class="text-sm text-slate-600 italic">Narkotika hanya dapat digunakan untuk kepentingan pelayanan kesehatan dan/atau pengembangan ilmu pengetahuan.</p>
+                                </div>
+                                <div class="accent-border pl-6">
+                                    <h5 class="font-bold text-slate-800">Pasal 54</h5>
+                                    <p class="text-sm text-slate-600">Pecandu Narkotika dan korban penyalahgunaan Narkotika wajib menjalani rehabilitasi medis dan rehabilitasi sosial.</p>
+                                </div>
+                                <div class="accent-border pl-6">
+                                    <h5 class="font-bold text-slate-800">Pasal 111-126</h5>
+                                    <p class="text-sm text-slate-600">Ketentuan pidana berat bagi pemilik, penyimpan, pengedar, hingga produsen gelap narkotika.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">Dasar Hukum</h2>
+                    <h3 class="text-4xl font-extrabold text-slate-900 mb-8 leading-tight">Payung Hukum <br>Tegas & Berkeadilan</h3>
+                    <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                        Undang-Undang ini dirancang bukan hanya untuk menghukum, tetapi juga sebagai mekanisme perlindungan bagi masyarakat agar terhindar dari bahaya peredaran gelap yang merusak tatanan bangsa.
+                    </p>
+                    <ul class="grid grid-cols-2 gap-4">
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-700">
+                            <i class="fas fa-check text-green-500"></i> Rehabilitasi Medis
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-700">
+                            <i class="fas fa-check text-green-500"></i> Rehabilitasi Sosial
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-700">
+                            <i class="fas fa-check text-green-500"></i> Tindakan Preventif
+                        </li>
+                        <li class="flex items-center gap-3 text-sm font-bold text-slate-700">
+                            <i class="fas fa-check text-green-500"></i> Penegakan Represif
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotline Modal -->
+    <div id="hotline-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm px-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-10 shadow-2xl transform transition-all">
+            <div class="text-center mb-8">
+                <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-phone-volume text-3xl"></i>
+                </div>
+                <h3 class="text-2xl font-extrabold text-slate-900">Layanan Darurat</h3>
+                <p class="text-slate-500 mt-3">Segera hubungi layanan resmi jika Anda atau orang terdekat membutuhkan bantuan rehabilitasi.</p>
+            </div>
+            <div class="space-y-4">
+                <a href="tel:184" class="flex items-center justify-between bg-blue-600 text-white p-5 rounded-2xl font-bold hover:bg-blue-700 transition group shadow-lg">
+                    <span>Call Center BNN RI</span>
+                    <span class="bg-white/20 px-3 py-1 rounded-lg">184</span>
+                </a>
+                <a href="https://bnn.go.id" target="_blank" class="flex items-center justify-between border-2 border-slate-100 p-5 rounded-2xl font-bold hover:bg-slate-50 transition">
+                    <span>Akses Website Resmi</span>
+                    <i class="fas fa-external-link-alt text-slate-400"></i>
+                </a>
+                <button onclick="toggleHotline()" class="w-full text-center py-2 text-slate-400 font-bold hover:text-slate-600 transition text-sm">
+                    Tutup Jendela
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+                <div class="space-y-6 max-w-sm">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-blue-600 p-2 rounded-lg">
+                            <i class="fas fa-shield-heart text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-extrabold tracking-tight">EduNAPZA</span>
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Pusat edukasi digital terpadu untuk pencegahan penyalahgunaan narkoba di Indonesia. Bersama kita jaga masa depan bangsa.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-whi
